@@ -1,0 +1,92 @@
+.hobbies-section {
+  background-color: var(--background-alt);
+}
+
+.hobbies-bubble-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* Add slight asymmetry to the layout */
+  padding: 2rem 0;
+}
+
+.hobby-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  /* Asymmetrical positioning via nth-child */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hobby-bubble:nth-child(even) {
+  transform: translateY(30px);
+}
+
+.hobby-bubble:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+.hobby-bubble:nth-child(even):hover {
+  transform: translateY(20px) scale(1.05);
+}
+
+.hobby-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  color: var(--primary); /* Minimal white on blue context handled by background if needed, here it's white background */
+  font-size: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(10, 25, 47, 0.08);
+  margin-bottom: 1.2rem;
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.hobby-bubble:hover .hobby-icon {
+  border-color: var(--accent);
+  box-shadow: 0 15px 25px rgba(37, 99, 235, 0.15);
+}
+
+.hobby-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.hobby-title {
+  font-family: var(--font-sans);
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: none; /* Keep natural case for clean look */
+}
+
+.hobby-keyword {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Responsiveness for asymmetric layout */
+@media (max-width: 768px) {
+  .hobby-bubble:nth-child(even) {
+    transform: translateY(0);
+  }
+  .hobby-bubble:nth-child(even):hover {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+

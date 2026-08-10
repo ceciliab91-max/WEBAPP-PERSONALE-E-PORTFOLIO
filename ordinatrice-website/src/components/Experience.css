@@ -1,0 +1,108 @@
+.experience-section {
+  padding: 5rem 2rem;
+  background: var(--bg-primary, #0f172a);
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--neon-cyan, #06b6d4) 0%, rgba(6, 182, 212, 0.1) 100%);
+}
+
+.experience-card {
+  position: relative;
+  margin-left: 50px;
+  padding: 1.5rem 1.8rem;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--neon-cyan, #06b6d4);
+  box-shadow: 0 0 10px var(--neon-cyan, #06b6d4);
+}
+
+.experience-card:hover {
+  transform: translateX(5px);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.15);
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--neon-cyan, #06b6d4);
+  background: rgba(6, 182, 212, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.experience-company {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: 0.5px;
+}
+
+.experience-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.experience-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .experience-timeline::before {
+    left: 10px;
+  }
+  .experience-card {
+    margin-left: 30px;
+    padding: 1.2rem;
+  }
+  .experience-card::before {
+    left: -26px;
+  }
+}
