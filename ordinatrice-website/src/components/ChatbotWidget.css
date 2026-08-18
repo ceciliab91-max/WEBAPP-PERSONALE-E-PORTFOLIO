@@ -77,6 +77,25 @@
   }
 }
 
+/* Modal Backdrop Overlay */
+.chatbot-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 7, 13, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9998;
+  animation: fadeInBackdrop 0.25s ease-out forwards;
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Chat Window */
 .chatbot-window {
   position: absolute;

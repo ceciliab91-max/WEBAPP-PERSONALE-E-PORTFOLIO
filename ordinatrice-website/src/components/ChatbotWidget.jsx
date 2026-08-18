@@ -322,12 +322,20 @@ const ChatbotWidget = () => {
   };
 
   return (
-    <div className={`chatbot-wrapper ${isOpen ? 'active' : ''}`}>
-      <button 
-        className="chatbot-bubble" 
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Apri chatbot ceciB"
-      >
+    <>
+      {isOpen && (
+        <div 
+          className="chatbot-modal-backdrop" 
+          onClick={() => setIsOpen(false)}
+          aria-label="Chiudi modale chatbot"
+        />
+      )}
+      <div className={`chatbot-wrapper ${isOpen ? 'active' : ''}`}>
+        <button 
+          className="chatbot-bubble" 
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Apri chatbot ceciB"
+        >
         <span className="bubble-icon">💬</span>
         <span className="bubble-text">ceciB</span>
         <span className="pulse-indicator"></span>
@@ -401,7 +409,8 @@ const ChatbotWidget = () => {
         </div>
       </div>
     </div>
-  );
+  </>
+);
 };
 
 export default ChatbotWidget;

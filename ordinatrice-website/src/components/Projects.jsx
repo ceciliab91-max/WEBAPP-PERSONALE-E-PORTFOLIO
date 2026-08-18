@@ -50,10 +50,21 @@ const Projects = () => {
                 ? project.description[language] || project.description.it
                 : project.description;
 
-            const isComingSoon = project.badge === 'Coming Soon' || !project.isLive || !project.demoUrl;
+            const isChatbot = project.id === 'ai-chatbot' || project.isChatbot;
+            const isComingSoon = !isChatbot && (project.badge === 'Coming Soon' || !project.isLive || !project.demoUrl);
+
+            const handleOpenChatbot = (e) => {
+              if (e) e.stopPropagation();
+              window.dispatchEvent(new CustomEvent('open-ceciB-chatbot'));
+            };
 
             return (
-              <article key={project.id} className="project-card">
+              <article 
+                key={project.id} 
+                className={`project-card ${isChatbot ? 'project-card-chatbot' : ''}`}
+                onClick={isChatbot ? handleOpenChatbot : undefined}
+                style={isChatbot ? { cursor: 'pointer' } : undefined}
+              >
                 <div className="project-card-header">
                   <span className="project-category-badge">{project.category}</span>
                   {project.badge && (
@@ -82,34 +93,34 @@ const Projects = () => {
                 </div>
 
                 <div className="project-card-actions">
-                  {!isComingSoon && project.demoUrl ? (
+                  {isChatbot ? (
+                    <button
+                      type="button"
+                      className="project-btn btn-chatbot"
+                      onClick={handleOpenChatbot}
+                    >
+                      💬 {language === 'en' ? 'Try Live Chatbot' : 'Prova il Chatbot Live'}
+                    </button>
+                  ) : !isComingSoon && project.demoUrl ? (
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-btn btn-demo"
+                      onClick={(e) => e.stopPropagation()}
                     >
-                      🌐 Live Demo
+                      🌐 {language === 'en' ? 'Live Demo' : 'Vedi Progetto / Live Demo'}
                     </a>
                   ) : (
                     <button
                       type="button"
                       disabled
                       className="project-btn btn-demo btn-disabled"
-                      title="Progetto non ancora in produzione"
+                      title={language === 'en' ? 'Project coming soon' : 'Progetto non ancora in produzione'}
                     >
-                      ⏳ In Arrivo
+                      ⏳ {language === 'en' ? 'Coming Soon' : 'In Arrivo'}
                     </button>
                   )}
-
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-btn btn-github"
-                  >
-                    🐙 GitHub / Codice
-                  </a>
                 </div>
               </article>
             );
