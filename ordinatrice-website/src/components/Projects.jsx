@@ -1,44 +1,119 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { projectsData, categories } from '../data/projectsData';
 import './Projects.css';
 
 const Projects = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const [activeFilter, setActiveFilter] = useState('Tutti');
+
+  const filteredProjects = projectsData.filter((project) => {
+    if (activeFilter === 'Tutti' || activeFilter === 'All') return true;
+    return project.filterCategory === activeFilter;
+  });
 
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
-        <h2 className="section-title">{t.projects.sectionTitle}</h2>
+        <h2 className="section-title">
+          {t?.projects?.sectionTitle || (language === 'en' ? 'Portfolio & Projects' : 'Portfolio & Progetti')}
+        </h2>
+
+        {/* Category Filters */}
+        <div className="project-filters" role="tablist" aria-label="Filtri Categoria Progetti">
+          {categories.map((cat) => {
+            const filterLabel = language === 'en' ? cat.en : cat.it;
+            const isSelected =
+              activeFilter === cat.it ||
+              (cat.id === 'all' && (activeFilter === 'Tutti' || activeFilter === 'All'));
+
+            return (
+              <button
+                key={cat.id}
+                type="button"
+                role="tab"
+                aria-selected={isSelected}
+                className={`filter-btn ${isSelected ? 'active' : ''}`}
+                onClick={() => setActiveFilter(cat.it)}
+              >
+                {filterLabel}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Projects Grid */}
         <div className="projects-grid">
-          {t.projects.items.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-card-header">
-                <div className="project-tags">
-                  {project.tags.map((tag, tagIdx) => (
-                    <span key={tagIdx} className={`project-tag ${tag === 'Live Site' ? 'live-tag' : ''}`}>
-                      {tag}
+          {filteredProjects.map((project) => {
+            const description =
+              typeof project.description === 'object'
+                ? project.description[language] || project.description.it
+                : project.description;
+
+            const isComingSoon = project.badge === 'Coming Soon' || !project.isLive || !project.demoUrl;
+
+            return (
+              <article key={project.id} className="project-card">
+                <div className="project-card-header">
+                  <span className="project-category-badge">{project.category}</span>
+                  {project.badge && (
+                    <span
+                      className={`project-badge ${
+                        project.badge.toLowerCase().includes('coming soon')
+                          ? 'badge-coming-soon'
+                          : 'badge-featured'
+                      }`}
+                    >
+                      {project.badge}
+                    </span>
+                  )}
+                </div>
+
+                <h3 className="project-title">{project.title}</h3>
+
+                <p className="project-desc">{description}</p>
+
+                <div className="project-tech-stack">
+                  {project.techStack.map((tech, idx) => (
+                    <span key={idx} className="tech-tag">
+                      {tech}
                     </span>
                   ))}
                 </div>
-              </div>
-              <h3 className="project-title">{project.title}</h3>
-              <h4 className="project-subtitle">{project.subtitle}</h4>
-              <p className="project-desc">{project.description}</p>
-              
-              {project.link ? (
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="project-link-btn"
-                >
-                  🌐 Visita Sito ({project.title}) &rarr;
-                </a>
-              ) : (
-                <span className="project-status-badge">⚡ In Uscita / Produzione Interna</span>
-              )}
-            </div>
-          ))}
+
+                <div className="project-card-actions">
+                  {!isComingSoon && project.demoUrl ? (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-btn btn-demo"
+                    >
+                      🌐 Live Demo
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      disabled
+                      className="project-btn btn-demo btn-disabled"
+                      title="Progetto non ancora in produzione"
+                    >
+                      ⏳ In Arrivo
+                    </button>
+                  )}
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn btn-github"
+                  >
+                    🐙 GitHub / Codice
+                  </a>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

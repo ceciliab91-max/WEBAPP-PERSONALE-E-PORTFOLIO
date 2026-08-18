@@ -235,6 +235,18 @@
 }
 
 /* Typing Indicator */
+.typing-indicator-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.typing-label {
+  font-size: 0.8rem;
+  color: var(--chat-muted);
+  font-style: italic;
+}
+
 .typing-indicator {
   display: flex;
   gap: 4px;
@@ -259,9 +271,64 @@
 
 /* Options / Quick Replies */
 .chat-footer {
-  padding: 15px 20px 20px;
+  padding: 12px 16px 16px;
   background-color: var(--obsidian-light);
   border-top: 1px solid var(--obsidian-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-input-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.chat-input-field {
+  flex: 1;
+  background-color: var(--obsidian);
+  border: 1px solid var(--obsidian-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--chat-text);
+  font-family: inherit;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.chat-input-field:focus {
+  border-color: var(--neon-mint);
+}
+
+.chat-input-field::placeholder {
+  color: var(--chat-muted);
+}
+
+.chat-send-btn {
+  background-color: var(--neon-mint);
+  color: #050609;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+}
+
+.chat-send-btn:hover:not(:disabled) {
+  background-color: var(--neon-mint-hover);
+  box-shadow: 0 0 10px var(--mint-glow);
+}
+
+.chat-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .chat-options {

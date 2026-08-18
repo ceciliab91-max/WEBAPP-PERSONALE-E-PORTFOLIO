@@ -11,7 +11,7 @@ export const translations = {
       sectionTitle: "Chi Sono & Approccio",
       concept1: "Rigore Gestionale",
       concept2: "IA & Office Automation",
-      text: "Oltre 10 anni di esperienza tra studi legali, brokeraggio assicurativo e direzione amministrativa di startup.",
+      text: "Oltre 10 anni di esperienza tra prestigiosi studi legali, brokeraggio assicurativo e direzione amministrativa di startup.",
       presentationTitle: "Profilo Professionale",
       presentation: "Piacere, sono Cecilia Bazzucchi. Con oltre dieci anni di esperienza maturati tra prestigiosi studi legali, il settore del brokeraggio assicurativo e la gestione amministrativa in autonomia di un gruppo di 15 startup, ho sviluppato una solida competenza nella direzione operativa, contabile e finanziaria di uffici complessi.\n\nIl mio approccio al lavoro unisce il rigore gestionale tradizionale a una profonda mentalità tecnologica. Sviluppo Gemme IA personalizzate (Custom Gems), script Python per l'automazione documentale massiva e applicazioni web d'ufficio per ottimizzare i flussi di lavoro.\n\nAttualmente sto completando la mia formazione come Full-Stack AI Web Developer (React, JavaScript, Node.js, SQL e integrazione LLM).\n\nUtilizzo l'Inglese a livello professionale (C1). Nel tempo libero pratico nuoto, surf, equitazione e sci, e mi dedico alla lettura.",
       downloadCV: "Scarica il mio Curriculum Vitae (PDF)"
@@ -42,9 +42,9 @@ export const translations = {
         },
         {
           period: "2024 - Presente",
-          role: "Personal Assistant & Digital Developer",
+          role: "Supporto Direzionale & Sviluppo Web",
           company: "PERSONAL ASSISTANT & DIGITAL DEVELOPER (AMBITO ASSICURATIVO)",
-          description: "Supporto direzionale, gestione back-office assicurativo e sviluppo web. Creatrice e sviluppatrice di mamedcare.it."
+          description: "Supporto direzionale, gestione back-office assicurativo e sviluppo web."
         },
         {
           period: "2023 - 2025",
@@ -70,32 +70,45 @@ export const translations = {
       sectionTitle: "Portfolio & Progetti",
       items: [
         {
-          title: "ceciB — AI Digital Twin & Interactive Chatbot",
-          subtitle: "Assistente Virtuale Personalizzato & AI Integration",
-          tags: ["AI & LLM", "Web Integration"],
-          link: null,
-          description: "Ho sviluppato ceciB, un assistente virtuale e chatbot AI personalizzato, addestrato sul mio percorso professionale per rispondere in tempo reale su competenze, progetti ed esperienze."
+          title: "Gestionale MC Servizi — Full-Stack Platform (DB + AI)",
+          subtitle: "Piattaforma Gestionale Corporate & Live Demo",
+          tags: ["Full-Stack", "Node.js", "SQL Database", "AI Integration"],
+          link: "https://github.com/ceciliab91-max",
+          buttonText: "Vedi su GitHub",
+          description: "Piattaforma gestionale aziendale complessa e su misura per MC Servizi, dotata di database relazionale per la persistenza dei dati e integrazione di moduli AI per l'automazione dei flussi operativi."
+        },
+        {
+          title: "MC Servizi — Corporate Web Platform",
+          subtitle: "Sito Web Aziendale / Corporate Platform",
+          tags: ["Web Development", "UI/UX", "Live Project"],
+          link: "https://github.com/ceciliab91-max",
+          buttonText: "Visita MC Servizi",
+          description: "Progettazione e sviluppo del nuovo sito web aziendale per MC Servizi, ottimizzato per dispositivi mobile e comunicazione istituzionale."
         },
         {
           title: "Mamedcare.it — Sito Web Assicurativo",
-          subtitle: "Sito Web Assicurativo Live",
-          tags: ["Live Site", "Web Dev"],
+          subtitle: "Piattaforma Web Assicurativa Live",
+          tags: ["Live Site", "Web Dev", "Responsive"],
           link: "https://mamedcare.it",
-          description: "Piattaforma web completa per soluzioni assicurative sanitarie, progettata e sviluppata per la massima chiarezza e conversione."
+          buttonText: "Visita Mamedcare.it",
+          description: "Piattaforma web sviluppata per il settore assicurativo, con struttura informativa e ottimizzazione per la navigazione utente."
         },
         {
-          title: "Custom Gems & IA Office Automation",
-          subtitle: "Automazione IA & Workflow",
-          tags: ["AI & Automation", "Python"],
-          link: null,
-          description: "Sviluppo di Custom Gems personalizzate ed esecuzione di script Python per l'estrazione dati e l'automazione documentale massiva d'ufficio."
+          title: "Custom AI Gems — Insurance & Office Automation Suite",
+          subtitle: "Automazione IA & Document Processing",
+          tags: ["AI Engineering", "Google Custom Gems", "Process Automation"],
+          link: "https://github.com/ceciliab91-max",
+          buttonText: "Vedi su GitHub",
+          description: "Suite di assistenti AI personalizzati sviluppati per l'analisi automatica di documenti assicurativi, verbali ed estrazione dati."
         },
         {
-          title: "React & Full-Stack Web Applications",
-          subtitle: "Applicazioni Web Front-End & Back-End",
-          tags: ["Front-End & Back-End", "React", "Node.js"],
+          title: "ceciB — AI Digital Twin & Interactive Chatbot",
+          subtitle: "Assistente Virtuale Personalizzato & AI Integration",
+          tags: ["AI & LLM", "Web Integration", "JavaScript"],
           link: null,
-          description: "Applicazioni web dinamiche sviluppate con React, JavaScript moderno, Node.js, gestione del database e integrazione API."
+          action: "chatbot",
+          buttonText: "Chatta con ceciB",
+          description: "Chatbot AI personalizzato integrato nella vCard, addestrato sul mio percorso professionale per rispondere in tempo reale alle domande di recruiter e visitatori."
         }
       ]
     },
@@ -131,7 +144,7 @@ export const translations = {
     chatbot: {
       title: "Incontra ceciB — Il mio Digital Twin AI",
       description: "Ho sviluppato ceciB, un assistente virtuale e chatbot AI personalizzato, addestrato sul mio percorso professionale. Chiedigli pure per scoprire dettagli sulle mie competenze, sui miei progetti o sulla mia esperienza lavorativa.",
-      greeting: "Ciao! Sono ceciB, il Digital Twin AI di Cecilia Bazzucchi. Ho sviluppato ceciB, un assistente virtuale personalizzato addestrato sul mio percorso professionale. Chiedimi pure per scoprire dettagli sulle mie competenze, sui miei progetti o sulla mia esperienza lavorativa!",
+      greeting: "Ciao! Sono ceciB, il Digital Twin AI di Cecilia Bazzucchi. Ho sviluppato ceciB, un assistente virtuale e chatbot AI personalizzato, addestrato sul mio percorso professionale. Chiedigli pure per scoprire dettagli sulle mie competenze, sui miei progetti o sulla mia esperienza lavorativa!",
       menu: {
         interview: "⚡ Intervista Virtuale",
         skills: "📊 Competenze & Tech",
@@ -148,14 +161,14 @@ export const translations = {
         q3: "Qual è la tua formazione Tech e il tuo livello di Inglese?",
         a3: "Sto completando la formazione come Full-Stack AI Web Developer (React, Node.js, SQL, LLM). Utilizzo l'Inglese a livello professionale (C1).",
         q4: "Che tipo di progetti hai realizzato?",
-        a4: "Tra i progetti principali ci sono ceciB (il mio Digital Twin AI), il sito web assicurativo mamedcare.it, applicazioni web React/Node.js e sistemi di automazione d'ufficio basati su Python e IA.",
+        a4: "Tra i progetti principali ci sono MC Servizi (Corporate Web Platform), Custom AI Gems per l'automazione documentale e d'ufficio, Smart Data Management System e ceciB (il mio Digital Twin AI).",
         nextQuestion: "Vuoi farmi un'altra domanda?"
       },
       skills: {
         text: "Ecco le competenze principali di Cecilia:\n\n• **Direzione Operativa & Contabile**: 10+ anni in uffici complessi, 15 startup gestite in autonomia.\n• **Tech & Full-Stack**: React, JavaScript, Node.js, SQL, integrazione LLM.\n• **IA & Automation**: Custom Gems personalizzate, script Python per documenti massivi.\n• **Lingue**: Italiano (madrelingua), Inglese (C1 Professionale), Spagnolo (A2)."
       },
       experience: {
-        text: "Esperienze principali:\n\n• **Studio Legale Pizzuti & Partners (2026-Pres.)**: Responsabile Amministrativo & Automation Specialist.\n• **Personal Assistant & Digital Dev (2024-Pres.)**: Ambito Assicurativo & Creatrice di mamedcare.it.\n• **Fuel Srl (2023-2025)**: Responsabile Amministrativo (Fuel + 15 startup).\n• **Assimood Broker (2023-2024)**: Back-Office Assicurativo & Contabilità.\n• **Studio Legale Galoppi & Partners (2012-2022)**: Responsabile Amministrativa (10 anni)."
+        text: "Esperienze principali:\n\n• **Studio Legale Pizzuti & Partners (2026-Pres.)**: Responsabile Amministrativo & Automation Specialist.\n• **Personal Assistant & Digital Dev (2024-Pres.)**: Personal Assistant & Digital Developer (Ambito Assicurativo).\n• **Fuel Srl (2023-2025)**: Responsabile Amministrativo (Fuel + 15 startup).\n• **Assimood Broker (2023-2024)**: Back-Office Assicurativo & Contabilità.\n• **Studio Legale Galoppi & Partners (2012-2022)**: Responsabile Amministrativa (10 anni)."
       },
       contact: {
         text: "Ecco i canali diretti per contattare Cecilia o scaricare il suo CV:",
@@ -208,9 +221,9 @@ export const translations = {
         },
         {
           period: "2024 - Present",
-          role: "Personal Assistant & Digital Developer",
+          role: "Executive Support & Web Development",
           company: "PERSONAL ASSISTANT & DIGITAL DEVELOPER (INSURANCE SECTOR)",
-          description: "Executive support, insurance back-office management, and web development. Creator & developer of mamedcare.it."
+          description: "Executive support, insurance back-office management, and web development."
         },
         {
           period: "2023 - 2025",
@@ -236,32 +249,45 @@ export const translations = {
       sectionTitle: "Portfolio & Projects",
       items: [
         {
-          title: "ceciB — AI Digital Twin & Interactive Chatbot",
-          subtitle: "Custom Virtual Assistant & AI Integration",
-          tags: ["AI & LLM", "Web Integration"],
-          link: null,
-          description: "I developed ceciB, a custom virtual AI assistant trained on my professional journey to answer questions about my skills, projects, and work experience in real time."
+          title: "Gestionale MC Servizi — Full-Stack Platform (DB + AI)",
+          subtitle: "Corporate Management Platform & Live Demo",
+          tags: ["Full-Stack", "Node.js", "SQL Database", "AI Integration"],
+          link: "https://github.com/ceciliab91-max",
+          buttonText: "View on GitHub",
+          description: "Complex custom corporate management platform developed for MC Servizi, featuring a relational database for data persistence and AI modules integration for workflow automation."
+        },
+        {
+          title: "MC Servizi — Corporate Web Platform",
+          subtitle: "Corporate Web Platform & Live Site",
+          tags: ["Web Development", "UI/UX", "Live Project"],
+          link: "https://github.com/ceciliab91-max",
+          buttonText: "Visit MC Servizi",
+          description: "Design and development of the new corporate website for MC Servizi, optimized for mobile devices and corporate communication."
         },
         {
           title: "Mamedcare.it — Insurance Web Platform",
-          subtitle: "Live Insurance Website",
-          tags: ["Live Site", "Web Dev"],
+          subtitle: "Live Insurance Web Platform",
+          tags: ["Live Site", "Web Dev", "Responsive"],
           link: "https://mamedcare.it",
-          description: "Comprehensive web platform for health insurance solutions, designed and developed for maximum clarity and conversion."
+          buttonText: "Visit Mamedcare.it",
+          description: "Web platform developed for the insurance sector, with structured information hierarchy and user navigation optimization."
         },
         {
-          title: "Custom Gems & AI Office Automation",
-          subtitle: "AI Automation & Workflows",
-          tags: ["AI & Automation", "Python"],
-          link: null,
-          description: "Development of Custom AI Gems and Python scripts for data extraction and bulk office document automation."
+          title: "Custom AI Gems — Insurance & Office Automation Suite",
+          subtitle: "AI Automation & Document Processing",
+          tags: ["AI Engineering", "Google Custom Gems", "Process Automation"],
+          link: "https://github.com/ceciliab91-max",
+          buttonText: "View on GitHub",
+          description: "Suite of custom AI assistants developed for automatic analysis of insurance documents, minutes, and data extraction."
         },
         {
-          title: "React & Full-Stack Web Applications",
-          subtitle: "Front-End & Back-End Web Apps",
-          tags: ["Front-End & Back-End", "React", "Node.js"],
+          title: "ceciB — AI Digital Twin & Interactive Chatbot",
+          subtitle: "Custom Virtual Assistant & AI Integration",
+          tags: ["AI & LLM", "Web Integration", "JavaScript"],
           link: null,
-          description: "Dynamic web applications built with React, modern JavaScript, Node.js, database management, and API integration."
+          action: "chatbot",
+          buttonText: "Chat with ceciB",
+          description: "Custom AI chatbot integrated into the vCard, trained on my professional journey to answer questions from recruiters and visitors in real time."
         }
       ]
     },
@@ -297,7 +323,7 @@ export const translations = {
     chatbot: {
       title: "Meet ceciB — My AI Digital Twin",
       description: "I developed ceciB, a custom virtual AI assistant trained on my professional journey. Feel free to ask about my skills, projects, or work experience.",
-      greeting: "Hi! I am ceciB, Cecilia Bazzucchi's AI Digital Twin. Ask me anything to discover details about my skills, projects, or work experience!",
+      greeting: "Hi! I am ceciB, Cecilia Bazzucchi's AI Digital Twin. I developed ceciB, a custom virtual AI assistant trained on my professional journey. Feel free to ask about my skills, projects, or work experience!",
       menu: {
         interview: "⚡ Virtual Interview",
         skills: "📊 Skills & Tech Stack",
@@ -314,14 +340,14 @@ export const translations = {
         q3: "What is your Tech background and English level?",
         a3: "I am completing my training as a Full-Stack AI Web Developer (React, Node.js, SQL, LLM). I speak English at a professional level (C1).",
         q4: "What projects have you created?",
-        a4: "Key projects include ceciB (my AI Digital Twin), the live insurance site mamedcare.it, React/Node.js web apps, and Python/AI document automation systems.",
+        a4: "Key projects include MC Servizi (Corporate Web Platform), Custom AI Gems for insurance & office automation, Smart Data Management System, and ceciB (my AI Digital Twin).",
         nextQuestion: "Would you like to ask another question?"
       },
       skills: {
         text: "Here are Cecilia's core competencies:\n\n• **Operations & Accounting**: 10+ years in complex offices, 15 startups managed autonomously.\n• **Tech & Full-Stack**: React, JavaScript, Node.js, SQL, LLM integration.\n• **AI & Automation**: Custom Gems, Python scripts for bulk documents.\n• **Languages**: Italian (native), English (C1 Professional), Spanish (A2)."
       },
       experience: {
-        text: "Key Work Experience:\n\n• **Pizzuti & Partners Law Firm (2026-Pres.)**: Administration Manager & Automation Specialist.\n• **Personal Assistant & Digital Dev (2024-Pres.)**: Insurance Sector & Creator of mamedcare.it.\n• **Fuel Srl (2023-2025)**: Administration Manager (Fuel + 15 startups).\n• **Assimood Broker (2023-2024)**: Insurance Back-Office & Accounting.\n• **Galoppi & Partners Law Firm (2012-2022)**: Administration Manager (10 years)."
+        text: "Key Work Experience:\n\n• **Pizzuti & Partners Law Firm (2026-Pres.)**: Administration Manager & Automation Specialist.\n• **Personal Assistant & Digital Dev (2024-Pres.)**: Personal Assistant & Digital Developer (Insurance Sector).\n• **Fuel Srl (2023-2025)**: Administration Manager (Fuel + 15 startups).\n• **Assimood Broker (2023-2024)**: Insurance Back-Office & Accounting.\n• **Galoppi & Partners Law Firm (2012-2022)**: Administration Manager (10 years)."
       },
       contact: {
         text: "Here are direct channels to reach Cecilia or download her CV:",
