@@ -11,11 +11,11 @@ const Contact = () => {
         <h2 className="section-title">{t.contact.sectionTitle}</h2>
         
         <div className="contact-buttons-grid">
-          <a href="mailto:ceciliab91@gmail.com" className="contact-action-btn email-btn">
-            <span className="btn-icon">✉️</span>
-            <div className="btn-text">
+          <a href="mailto:ceciliab91@gmail.com" className="contact-action-btn email-btn overflow-hidden min-w-0 p-4 sm:p-5">
+            <span className="btn-icon flex-shrink-0 shrink-0">✉️</span>
+            <div className="btn-text min-w-0 max-w-full">
               <span className="btn-label">Email</span>
-              <span className="btn-val">{t.contact.emailLink}</span>
+              <span className="btn-val break-all truncate text-sm sm:text-base max-w-full">{t.contact.emailLink}</span>
             </div>
           </a>
 

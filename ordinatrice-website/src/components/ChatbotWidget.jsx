@@ -95,9 +95,22 @@ const ChatbotWidget = () => {
   const [inputText, setInputText] = useState('');
   const chatEndRef = useRef(null);
 
+  const resetChat = React.useCallback(() => {
+    setIsTyping(false);
+    setCurrentMenu('main');
+    setMessages([
+      {
+        id: 1,
+        sender: 'bot',
+        text: t.chatbot.greeting,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      }
+    ]);
+  }, [t.chatbot.greeting]);
+
   useEffect(() => {
     resetChat();
-  }, [language]);
+  }, [language, resetChat]);
 
   useEffect(() => {
     const handleOpenChat = () => setIsOpen(true);
@@ -110,19 +123,6 @@ const ChatbotWidget = () => {
       chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, isTyping]);
-
-  const resetChat = () => {
-    setIsTyping(false);
-    setCurrentMenu('main');
-    setMessages([
-      {
-        id: 1,
-        sender: 'bot',
-        text: t.chatbot.greeting,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      }
-    ]);
-  };
 
   const handleUserSendMessage = async (textToSend) => {
     if (!textToSend || !textToSend.trim() || isTyping) return;

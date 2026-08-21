@@ -9,6 +9,9 @@ const Projects = () => {
 
   const filteredProjects = projectsData.filter((project) => {
     if (activeFilter === 'Tutti' || activeFilter === 'All') return true;
+    if (Array.isArray(project.filterCategory)) {
+      return project.filterCategory.includes(activeFilter);
+    }
     return project.filterCategory === activeFilter;
   });
 
@@ -51,7 +54,13 @@ const Projects = () => {
                 : project.description;
 
             const isChatbot = project.id === 'ai-chatbot' || project.isChatbot;
-            const isComingSoon = !isChatbot && (project.badge === 'Coming Soon' || !project.isLive || !project.demoUrl);
+            const isComingSoon =
+              !isChatbot &&
+              (project.badge === 'Coming Soon' ||
+                project.badge === 'In Arrivo' ||
+                project.status === 'coming_soon' ||
+                !project.isLive ||
+                !project.demoUrl);
 
             const handleOpenChatbot = (e) => {
               if (e) e.stopPropagation();
@@ -70,12 +79,18 @@ const Projects = () => {
                   {project.badge && (
                     <span
                       className={`project-badge ${
-                        project.badge.toLowerCase().includes('coming soon')
+                        project.badge.toLowerCase().includes('coming soon') ||
+                        project.badge.toLowerCase().includes('in arrivo') ||
+                        project.status === 'coming_soon'
                           ? 'badge-coming-soon'
                           : 'badge-featured'
                       }`}
                     >
-                      {project.badge}
+                      {project.badge === 'In Arrivo' && language === 'en'
+                        ? 'Coming Soon'
+                        : project.badge === 'Coming Soon' && language === 'it'
+                        ? 'In Arrivo'
+                        : project.badge}
                     </span>
                   )}
                 </div>

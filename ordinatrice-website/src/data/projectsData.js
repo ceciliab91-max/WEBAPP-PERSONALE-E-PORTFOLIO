@@ -1,12 +1,55 @@
 export const categories = [
   { id: "all", it: "Tutti", en: "All" },
   { id: "enterprise", it: "Enterprise & Produttività", en: "Enterprise & Productivity" },
+  { id: "fintech", it: "Fintech & HR", en: "Fintech & HR" },
   { id: "genai", it: "GenAI & LLM", en: "GenAI & LLM" },
   { id: "webapps", it: "Web Apps & E-Commerce", en: "Web Apps & E-Commerce" },
   { id: "business", it: "Business & Gestionali", en: "Business & Management" }
 ];
 
 export const projectsData = [
+  {
+    id: "jetpay",
+    title: "JetPay — Net Salary & Cost-Saving Engine",
+    category: "FINTECH & HR TECH / CALCULATION ENGINE",
+    filterCategory: ["Enterprise & Produttività", "Fintech & HR"],
+    techStack: [
+      "React 18",
+      "Tailwind CSS",
+      "Lucide Icons",
+      "TUIR Compliant Engine",
+      "Fintech Design System"
+    ],
+    description: {
+      it: "Simulatore interattivo per il calcolo e la proiezione dello stipendio netto (annuale e mensile) da RAL dipendente. Motore fiscale conforme al TUIR (INPS 9,19%, scaglioni IRPEF a 3 aliquote, detrazioni progressive art. 13, addizionali Milano/Roma). Include modulo B2B per la quantificazione del costo azienda e simulazione del risparmio fiscale tramite Fringe Benefit e Buoni Pasto Elettronici (art. 51 TUIR).",
+      en: "Interactive simulator for calculating and projecting net salary (annual and monthly) from gross employee salary (RAL). Tax engine compliant with TUIR (INPS 9.19%, 3-tier IRPEF brackets, progressive deductions under Art. 13, Milan/Rome local surtaxes). Includes a B2B module for quantifying employer costs and tax savings simulations via Fringe Benefits and Electronic Meal Vouchers (Art. 51 TUIR)."
+    },
+    badge: "Featured / HR Engine",
+    demoUrl: "https://jetpaynetsalary.netlify.app",
+    githubUrl: "https://github.com/tuo-username/jetpay",
+    isLive: true
+  },
+  {
+    id: "jetfreelance",
+    title: "JetFreelance — Partita IVA & Contractor Simulator",
+    category: "FINTECH / CONTRACTOR & FREELANCE PLATFORM",
+    filterCategory: ["Enterprise & Produttività", "Fintech & HR"],
+    techStack: [
+      "React 18",
+      "Tailwind CSS",
+      "Legge 190/2014",
+      "Cashflow & F24 Engine",
+      "Responsive UI"
+    ],
+    description: {
+      it: "Simulatore finanziario avanzato per freelance e contractor in Regime Forfettario (Legge 190/2014). Calcolo deterministico di imposta sostitutiva (5% startup / 15% ordinaria) e contributi INPS Gestione Separata/Casse Private su coefficienti ATECO (78%, 67%, 40%). Include convertitore Day/Hourly Rate, scadenziario predittivo liquidità F24 e benchmark comparativo 'Dipendente vs Freelance' con buffer ferie (+20%) e RAL equivalente.",
+      en: "Advanced financial simulator for freelancers and contractors under the Flat Rate scheme (Regime Forfettario - Law 190/2014). Deterministic calculation of substitute tax (5% startup / 15% standard) and INPS Separate Management/Private Pension Fund contributions based on ATECO coefficients (78%, 67%, 40%). Includes Day/Hourly Rate converter, F24 liquidity predictive schedule, and employee vs freelance comparative benchmark with holiday buffer (+20%) and equivalent gross salary (RAL)."
+    },
+    badge: "Featured / P.IVA Engine",
+    demoUrl: "https://partitaivaengine.netlify.app",
+    githubUrl: "https://github.com/tuo-username/jetfreelance",
+    isLive: true
+  },
   {
     id: "hub-personale",
     title: "Hub Personale — Scrivania Digitale & Legal/Insurance Hub",
@@ -107,10 +150,11 @@ export const projectsData = [
       it: "Applicativo gestionale per l'organizzazione operativa interna, tracciamento commesse, gestione anagrafica clienti e monitoraggio attività aziendali.",
       en: "Management application for internal operational organization, order tracking, client records management, and corporate performance monitoring."
     },
-    badge: null,
-    demoUrl: "https://tuo-link-gestionale-mc.vercel.app",
+    badge: "In Arrivo",
+    status: "coming_soon",
+    demoUrl: null,
     githubUrl: "https://github.com/tuo-username/gestionale-mc-servizi",
-    isLive: true
+    isLive: false
   },
   {
     id: "sito-mc-servizi",
@@ -122,9 +166,10 @@ export const projectsData = [
       it: "Sito vetrina aziendale moderno e responsive, ottimizzato per conversioni, SEO locale e navigazione mobile con form contatti integrato.",
       en: "Modern and responsive corporate showcase website, optimized for conversions, local SEO, and mobile navigation with integrated contact form."
     },
-    badge: null,
-    demoUrl: "https://tuo-link-sito-mc.vercel.app",
+    badge: "In Arrivo",
+    status: "coming_soon",
+    demoUrl: null,
     githubUrl: "https://github.com/tuo-username/sito-mc-servizi",
-    isLive: true
+    isLive: false
   }
 ];
